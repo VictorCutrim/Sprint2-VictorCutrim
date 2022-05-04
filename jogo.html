@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-jogo.css">
+    <title>GamesGuide-DinâmicaJavaScript-Víctor</title>
+</head>
+
+<body>
+
+
+    <div class="header">
+        <!--Cabeçalho-->
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="informações.html">SOBRE MINHA PARTE</a></li>
+            </ul>
+            <img src="./images/lua.png" id="icone">
+        </nav>
+    </div>
+
+
+    <div id="game">
+        <div id="frog"></div>
+        <div id="tronco"></div>
+    </div>
+
+    <h1 id="score">0</h1>
+
+
+
+
+
+
+
+    <!--Função em JS que coloca em uso ou retira o dark-mode ao clicar no icone da lua/sol-->>
+    <script>
+        var icone = document.getElementById("icone");
+        icone.onclick = function () {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                icone.src = "./images/sol.png";
+            } else {
+                icone.src = "./images/lua.png";;
+            }
+        }
+    </script>
+
+    <script src="script-jogo.js"></script>
+
+</body>
+
+</html>

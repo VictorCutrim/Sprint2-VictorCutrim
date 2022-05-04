@@ -1,0 +1,142 @@
+/* Configurações gerais do layout da página*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Definição das cores a serem usadas no light-mode e dark-mode*/
+:root {
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+
+}
+
+.dark-mode {
+    --primary-color: #000106;
+    --secondary-color: #fff;
+}
+
+
+#icone {
+    width: 30px;
+    cursor: pointer;
+}
+
+
+body {
+
+    width: 100%;
+    height: 100vh;
+    background: var(--primary-color);
+    font-family: sans-serif;
+    position: relative;
+}
+
+nav {
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.logo {
+    width: 10%;
+    height: 10%;
+}
+
+nav ul {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+
+}
+
+nav ul li a:hover {
+    color: #ff4321;
+}
+
+
+/*Configuração do layout do mini-game*/
+
+#score {
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+#game {
+    width: 600px;
+    height: 300px;
+    border: 2px solid var(--secondary-color);
+    margin: auto;
+    background-image: url("images/fundo.jpg");
+    background-size: cover;
+}
+
+#frog {
+    height: 75px;
+    width: 100px;
+    position: relative;
+    top: 225px;
+    background-image: url("images/sapo.png");
+    background-size: cover;
+}
+
+#tronco {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 175px;
+    left: 550px;
+    background-image: url("images/tronco.png");
+    background-size: cover;
+    animation: tronco 1.33s infinite;
+}
+
+
+@keyframes tronco {
+    0% {
+        left: 550px;
+    }
+
+    100% {
+        left: -50px;
+    }
+}
+
+.jump-animation {
+    animation: jump 0.5s;
+
+}
+
+@keyframes jump {
+    0% {
+        top: 225px;
+    }
+
+    50% {
+        top: 75px;
+    }
+
+    75% {
+        top: 75px;
+    }
+
+    100% {
+        top: 225px;
+    }
+}

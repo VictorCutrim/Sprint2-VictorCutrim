@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-info.css">
+    <title>GamesGuide-DinâmicaJavaScript-Víctor</title>
+</head>
+
+<body>
+
+
+    <div class="header">
+        <!--Cabeçalho-->
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="informações.html">SOBRE MINHA PARTE</a></li>
+            </ul>
+            <img src="./images/lua.png" id="icone">
+        </nav>
+    </div>
+
+
+    <!--Informações sobre meu artefato durante a Sprint 2-->
+
+    <div class="info">
+        <h1><span>Qual</span> foi a minha <span>responsabilidade</span> durate a <span>Sprint 2</span>?</h1>
+        <p>Opa, tudo bom?<br><br>Meu nome é Víctor, sou integrante da empresa Mechanics Guide Chanel (MECG) e
+            colaborador do
+            projeto Games Guide!<br>Durante essa segunda Sprint, fiquei responsável pelo artefato de dinâmicas com
+            JavaScript.<br>Utilizando os guias como referência, meu intuito era fazer uma manipulação de HTML e CSS
+            utilizando o JS de 3 maneiras distintas.<br>Após uma discussão com os outros integrantes da empresa, tivemos
+            a ideia de adicionar os seguintes itens:<br><br><strong>Dark/Light-mode;</strong><br><strong>Um breve quiz
+                sobre
+                a introdução ao RPG de mesa;</strong><br><strong>Um mini-game</strong>.</p>
+
+
+
+
+        <h3>Não achou o mini-game?<br><br>Não se peocupe, basta clicar na imagem da nossa persona na
+            Home-page!<br><br>Caso não queira, te dou uma ajudinha</h3>
+        <a href="jogo.html">Mini-game</a>
+    </div>
+
+
+
+
+    <!--Função em JS que coloca em uso ou retira o dark-mode ao clicar no icone da lua/sol-->>
+    <script>
+        var icone = document.getElementById("icone");
+        icone.onclick = function () {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                icone.src = "./images/sol.png";
+            } else {
+                icone.src = "./images/lua.png";;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

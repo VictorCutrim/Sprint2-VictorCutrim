@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GamesGuide-DinâmicaJavaScript-Víctor</title>
+</head>
+
+<body>
+
+
+    <div class="header">
+        <!--Cabeçalho-->
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="informações.html">SOBRE MINHA PARTE</a></li>
+            </ul>
+            <img src="./images/lua.png" id="icone">
+        </nav>
+    </div>
+
+
+    <!--Texto sobre o RPG-->
+    <div class="info">
+        <h1><span>O</span> que é o <span>RPG</span> de <span>mesa</span>?</h1>
+        <p>RPG é uma sigla em inglês que pode ser traduzida para "jogo de interpretação de papeis". Nele, um
+            grupo<br>
+            de amigos de reúne para construir uma história, algo semelhante a um teatro improvisado.
+            Nesse teatro, existe <br>o diretor, chamado de "narrador" ou "mestre", cujo qual ambienta o desenrolar
+            da
+            trama. E não menos importante,<br> existem os jogadores, que modificam a história à medida que
+            interpretam
+            seus personagens, tomando decisões <br>que podem alterar o rumo da história.</p>
+
+
+        <h2><span>Como</span> funciona?</h2>
+        <p>A primeira escolha que jogadores precisam definir é qual sistema irão jogar, pois há uma infinidade
+            deles.<br>
+            Cada sistema é o seu próprio jogo, com seu próprio mundo e regras. Escolher o sistema seria uma decisão<br>
+            equivalente ao grupo decidir se pretende jogar Xadrez, Damas, Jogo da Vida ou Banco Imobiliário. Cada
+            sistema <br>costuma ter seus próprios livros.
+            Para começar a jogar é preciso ter um livro do Mestre, que ensinará as regras <br>do mundo e de suas
+            possibilidades para o mestre, e um livro do jogador, que ensinará aos jogadores quem eles podem<br> ser e o
+            que
+            podem fazer nesse mundo. Em algumas ocasiões, o mesmo livro prepara tanto mestre quanto jogador.<br>
+            Os dados são usados na maioria dos sistemas para adicionar aleatoriedade quando os jogadores decidem fazer
+            algo, <br>ou quando algo vai acontecer a eles, como tentar saltar sobre um abismo ou cair em uma armadilha.
+        </p>
+
+        <h3>Agora que você foi inserido ao belo mundo do RPG, <br>que tal testar seus conhecimentos?</h3>
+        <a href="quiz.html">Quiz RPG</a>
+    </div>
+
+    <!--Imagem clicável da persona (ao clicar leva para a aaba de um mini-game)-->
+    <div class="img-box">
+        <a href="jogo.html"><img src="./images/persona.png" class="main-img"></a>
+    </div>
+
+
+    <!--Função em JS que coloca em uso ou retira o dark-mode ao clicar no icone da lua/sol-->>
+    <script>
+        var icone = document.getElementById("icone");
+        icone.onclick = function () {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                icone.src = "./images/sol.png";
+            } else {
+                icone.src = "./images/lua.png";;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
